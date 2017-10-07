@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12669</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="meh_project_development">
+      <ObjectId>16384</ObjectId>
+    </database>
+    <database id="4" parent="1" name="meh_project_test">
+      <ObjectId>49457</ObjectId>
+    </database>
+    <database id="5" parent="1" name="untitled2_development">
+      <ObjectId>99206</ObjectId>
+      <Visible>1</Visible>
+    </database>
+    <schema id="6" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-10-07.15:24:20.849</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="7" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="information_schema">
+      <ObjectId>12381</ObjectId>
+    </schema>
+    <schema id="12" parent="5" name="public">
+      <ObjectId>2200</ObjectId>
+      <Current>1</Current>
+    </schema>
+    <schema id="13" parent="5" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="14" parent="5" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="15" parent="5" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="16" parent="5" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="17" parent="5" name="information_schema">
+      <ObjectId>12381</ObjectId>
+    </schema>
+  </database-model>
+</dataSource>
