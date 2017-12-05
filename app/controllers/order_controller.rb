@@ -15,6 +15,16 @@ class OrderController < ApplicationController
   end
   private
   def order_params
-    params.permit(:name, :email, :tel, :full, :empty, :city, :street, :home, :kv, :flower, :note)
+    params.permit(:name,
+                  :email,
+                  :phone,
+                  :bottles,
+                  :returned_bottles,
+                  :information,
+                  :firm,
+                  :vitenumber,
+                  :delivery_address,
+                  :delivery_time,
+                  :delivery_date)
   end
 end
