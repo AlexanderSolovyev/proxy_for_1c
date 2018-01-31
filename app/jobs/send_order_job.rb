@@ -5,7 +5,17 @@ class SendOrderJob < ApplicationJob
 
   def perform(order)
     # Do something later
-    uri = URI.parse("http://212.7.4.74:8000/hv_copy/hs/PutOrder?Orders=Hello")
+    #uri = URI.parse("http://212.7.4.74:8000/hv_copy/hs/PutOrder?)
+	uri = URI.parse("http://212.7.4.74:8000/hv_copy/hs/GetConfirm?")
+    info = {
+      'regNumber' => '' #Регномер компании, или Личный (Селект: [Erakliendi] - "isikukood" / [ärikliendi] - "Reg.kood")
+      'name' => ''
+      'email' => '1430@list.ru',
+      'phone' => ''
+      'pass' => '12345'
+      'ID' => ''
+      'Confirm' => 'True' // из 1С
+    }
     data = {'firm' => order.firm,
             'name' => order.name,
             'phone' => order.phone,
@@ -19,8 +29,8 @@ class SendOrderJob < ApplicationJob
             'information' => "This order from rails!"
     }
     puts data
-    req = Net::HTTP::Post.new(uri, data)
-    req.body = data.to_json
+    req = Net::HTTP::Post.new(uri, info)
+    req.body = info.to_json
     req.basic_auth 'exch', '13572468'
     res = Net::HTTP.start(uri.hostname, uri.port){ |http| http.request(req) }
     puts res.code

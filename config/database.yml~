@@ -80,4 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: untitled2_production
+  username: untitled2
+  password: <%= ENV['UNTITLED2_DATABASE_PASSWORD'] %>
